@@ -1,8 +1,18 @@
+import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
+
 const Banner = () => {
+  const [text] = useTypewriter({
+    words: ["Professional Coder.", "Front-End Developer."],
+    loop: true,
+    typeSpeed: 20,
+    deleteSpeed: 20,
+    delaySpeed: 2000,
+  });
+
   return (
     <section
       id="home"
-      className="w-full pb-20 flex border-b-[1px] font-titleFont border-b-black"
+      className="w-full py-20 flex items-center border-b-[1px] font-titleFont border-b-black"
     >
       <div className="w-1/2">
         <div className="flex flex-col gap-5">
@@ -14,7 +24,12 @@ const Banner = () => {
             </span>
           </h1>
           <h2 className="text-4xl font-bold text-white">
-            a <span>Web Developer</span>
+            a <span>{text}</span>
+            <Cursor
+              cursorBlinking="false"
+              cursorStyle="|"
+              cursorColor="#ff014f"
+            ></Cursor>
           </h2>
           <p>
             I use animation as a third dimension by which to simplify

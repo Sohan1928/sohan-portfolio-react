@@ -3,7 +3,7 @@ import { navLinksData } from "../index";
 
 const Navbar = () => {
   return (
-    <div className="w-full h-20 mx-auto flex justify-between items-center font-titleFont">
+    <div className="w-full h-24 mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div>
         <img src="logo.png" alt="" />
       </div>
